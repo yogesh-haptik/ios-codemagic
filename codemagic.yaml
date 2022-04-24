@@ -5,7 +5,7 @@ workflows:
       - name: First step
         script: echo 'Hello World'
       - name: Build iOS app
-        script: xcodebuild build -workspace "iAmRich.xcworkspace" -scheme "iAmRich" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+        script: xcodebuild build -project "iAmRich.xcodeproj" -scheme "iAmRich" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     publishing:
       email:
         recipients:

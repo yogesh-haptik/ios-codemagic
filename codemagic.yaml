@@ -9,4 +9,5 @@ workflows:
     publishing:
       email:
         recipients:
+          - yogeshparwani99.yp@gmail.com
           - yogesh.parwani@haptik.ai

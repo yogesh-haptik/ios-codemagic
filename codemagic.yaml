@@ -11,3 +11,6 @@ workflows:
         recipients:
           - yogeshparwani99.yp@gmail.com
           - yogesh.parwani@haptik.ai
+        notify:
+          success: true
+          failure: true

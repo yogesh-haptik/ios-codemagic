@@ -1,0 +1,10 @@
+workflows:
+  ios-codemagic-workflow:
+    name: Exploring Codemagic for iOS
+    scripts:
+      - name: First step
+        script: echo 'Hello World'
+    publishing:
+      email:
+        recipients:
+          - yogesh.parwani@haptik.ai

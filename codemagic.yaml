@@ -14,7 +14,7 @@ workflows:
       - name: Set up code signing on xcode project
         script: xcode-project use-profiles
       - name: Build app
-        script: xcodebuild build -project "iAmRich.xcodeproj" -scheme "iAmRich" CODE_SIGN_INDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+        script: xcodebuild build -workspace "iAmRich.workspace" -scheme "iAmRich" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     artifacts:
       - build/ios/ipa/*.ipa
     publishing:

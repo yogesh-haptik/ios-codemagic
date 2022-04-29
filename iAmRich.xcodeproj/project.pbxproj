@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A8AE0FBE47E6C8DBD895BBD /* Pods_iAmRich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F56E6340C27D574D50889F4 /* Pods_iAmRich.framework */; };
 		EC06148A281165060017A18F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC061489281165060017A18F /* AppDelegate.swift */; };
 		EC06148C281165060017A18F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06148B281165060017A18F /* SceneDelegate.swift */; };
 		EC06148E281165060017A18F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC06148D281165060017A18F /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F56E6340C27D574D50889F4 /* Pods_iAmRich.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iAmRich.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BA6849BDD9989F3B3D7A71A /* Pods-iAmRich.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iAmRich.release.xcconfig"; path = "Target Support Files/Pods-iAmRich/Pods-iAmRich.release.xcconfig"; sourceTree = "<group>"; };
+		E17CBD1DA524E5F4A4B4896A /* Pods-iAmRich.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iAmRich.debug.xcconfig"; path = "Target Support Files/Pods-iAmRich/Pods-iAmRich.debug.xcconfig"; sourceTree = "<group>"; };
 		EC061486281165060017A18F /* iAmRich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAmRich.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC061489281165060017A18F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC06148B281165060017A18F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8AE0FBE47E6C8DBD895BBD /* Pods_iAmRich.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		136836C06E24ED5783F451C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F56E6340C27D574D50889F4 /* Pods_iAmRich.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89B2A9A42066BBC5EB79160B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E17CBD1DA524E5F4A4B4896A /* Pods-iAmRich.debug.xcconfig */,
+				8BA6849BDD9989F3B3D7A71A /* Pods-iAmRich.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EC06147D281165060017A18F = {
 			isa = PBXGroup;
 			children = (
 				EC061488281165060017A18F /* iAmRich */,
 				EC061487281165060017A18F /* Products */,
+				89B2A9A42066BBC5EB79160B /* Pods */,
+				136836C06E24ED5783F451C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EC06149A281165070017A18F /* Build configuration list for PBXNativeTarget "iAmRich" */;
 			buildPhases = (
+				7487882FB27F23DF1F027FC8 /* [CP] Check Pods Manifest.lock */,
 				EC061482281165060017A18F /* Sources */,
 				EC061483281165060017A18F /* Frameworks */,
 				EC061484281165060017A18F /* Resources */,
@@ -132,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7487882FB27F23DF1F027FC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iAmRich-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EC061482281165060017A18F /* Sources */ = {
@@ -284,11 +334,13 @@
 		};
 		EC06149B281165070017A18F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E17CBD1DA524E5F4A4B4896A /* Pods-iAmRich.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKD3TXVAND;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iAmRich/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -312,11 +364,13 @@
 		};
 		EC06149C281165070017A18F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BA6849BDD9989F3B3D7A71A /* Pods-iAmRich.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKD3TXVAND;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iAmRich/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

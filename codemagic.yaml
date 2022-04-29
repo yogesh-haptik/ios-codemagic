@@ -17,6 +17,8 @@ workflows:
         script: xcodebuild build -workspace "iAmRich.xcworkspace" -scheme "iAmRich" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     artifacts:
       - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
     publishing:
       email:
         recipients:
